@@ -69,8 +69,11 @@ namespace gus_stats
                     case "BDL":
                         if(bdlApiObj.status)
                         {
-                            labelTemat.Visible = true;
-                            comboBoxTemat.Visible = true;
+                            labelTopic.Visible = true;
+                            comboBoxTopic.Visible = true;
+
+                            ApiBdl topics = new ApiBdl();
+                            comboBoxTopic.Items.AddRange(topics.GetTopics()); //wywolanie GetTopics ktore zwraca topiki w array i wrzucenie do comboboxa
                         }
                         else
                         {

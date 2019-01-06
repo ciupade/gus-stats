@@ -42,8 +42,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.labelTemat = new System.Windows.Forms.Label();
-            this.comboBoxTemat = new System.Windows.Forms.ComboBox();
+            this.labelTopic = new System.Windows.Forms.Label();
+            this.comboBoxTopic = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -196,28 +196,28 @@
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
             // 
-            // labelTemat
+            // labelTopic
             // 
-            this.labelTemat.AutoSize = true;
-            this.labelTemat.ForeColor = System.Drawing.Color.White;
-            this.labelTemat.Location = new System.Drawing.Point(277, 47);
-            this.labelTemat.Name = "labelTemat";
-            this.labelTemat.Size = new System.Drawing.Size(74, 13);
-            this.labelTemat.TabIndex = 15;
-            this.labelTemat.Text = "Wybierz temat";
-            this.labelTemat.Visible = false;
+            this.labelTopic.AutoSize = true;
+            this.labelTopic.ForeColor = System.Drawing.Color.White;
+            this.labelTopic.Location = new System.Drawing.Point(277, 47);
+            this.labelTopic.Name = "labelTopic";
+            this.labelTopic.Size = new System.Drawing.Size(74, 13);
+            this.labelTopic.TabIndex = 15;
+            this.labelTopic.Text = "Wybierz temat";
+            this.labelTopic.Visible = false;
             // 
-            // comboBoxTemat
+            // comboBoxTopic
             // 
-            this.comboBoxTemat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.comboBoxTemat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxTemat.ForeColor = System.Drawing.Color.White;
-            this.comboBoxTemat.FormattingEnabled = true;
-            this.comboBoxTemat.Location = new System.Drawing.Point(397, 44);
-            this.comboBoxTemat.Name = "comboBoxTemat";
-            this.comboBoxTemat.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxTemat.TabIndex = 14;
-            this.comboBoxTemat.Visible = false;
+            this.comboBoxTopic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
+            this.comboBoxTopic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxTopic.ForeColor = System.Drawing.Color.White;
+            this.comboBoxTopic.FormattingEnabled = true;
+            this.comboBoxTopic.Location = new System.Drawing.Point(397, 44);
+            this.comboBoxTopic.Name = "comboBoxTopic";
+            this.comboBoxTopic.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTopic.TabIndex = 14;
+            this.comboBoxTopic.Visible = false;
             // 
             // label7
             // 
@@ -250,8 +250,8 @@
             this.ClientSize = new System.Drawing.Size(549, 562);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.labelTemat);
-            this.Controls.Add(this.comboBoxTemat);
+            this.Controls.Add(this.labelTopic);
+            this.Controls.Add(this.comboBoxTopic);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
@@ -291,8 +291,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label labelTemat;
-        private System.Windows.Forms.ComboBox comboBoxTemat;
+        private System.Windows.Forms.Label labelTopic;
+        private System.Windows.Forms.ComboBox comboBoxTopic;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox3;
     }

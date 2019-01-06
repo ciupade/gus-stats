@@ -19,7 +19,7 @@ namespace gus_stats
 
         abstract protected string ApiTestAddr { get;}
         /// <summary>
-        /// konstruktor klasy API. wywołuje sobie na start metodę connect, żeby sprawdzić czy gus przypadkiem nie zmienił adresu
+        /// konstruktor klasy API. wywołuje sobie na start metodę connect, żeby sprawdzić czy gus nie zmienil adresu
         /// przy okazji nadając sobie właściwość "status" na true jeśli dał radę pobrać przykładowe informacje
         /// </summary>
         public Api()
@@ -27,11 +27,15 @@ namespace gus_stats
             status = Connect();
         }
             
+        /// <summary>
+        /// Weryfikacja statusu polaczenia do konkretnego API
+        /// </summary>
+        /// <returns>status API</returns>
         protected bool Connect()
         {
             try
             {
-                //Creating the HttpWebRequest
+                //Creating the HttpWebRequest, zmienna ApiTestAddr przekazywana z klasy konkretnego API
                 HttpWebRequest request = WebRequest.Create(ApiTestAddr) as HttpWebRequest;
                 //Setting the Request method HEAD, you can also use GET too.
                 request.Method = "GET";
@@ -49,7 +53,7 @@ namespace gus_stats
             }
         }
 
-        public abstract string[] GetData();
+       public abstract string[] GetData();
 
         /// <summary>
         /// zwraca surowego xmla, trzeba go potem rozszyfrować
@@ -62,6 +66,18 @@ namespace gus_stats
             XmlDocument xml = new XmlDocument();
             xml.Load(requestUrl);
             return xml;
+        }
+
+        /// <summary>
+        /// Buduje pełny adres do API (adres api + sam request)
+        /// </summary>
+        /// <param name="requestString"> sam request </param>
+        /// <returns> zwraca pełny adres do odpytania API </returns>
+        private string buildRequestUrl(string requestString)
+        {
+            string url;
+            url = ApiTestAddr + requestString;
+            return url;
         }
 
         private string[,] ReadResponse(XmlDocument xml,string rootName)
@@ -96,13 +112,15 @@ namespace gus_stats
             return nodesContents;
         }
 
-        private string buildRequestUrl(string requestString)
-        {
-            string url;
-            url = ApiTestAddr + requestString;
-            return url;
-        }
-
+        /// <summary>
+        /// wykonuje request do api
+        /// </summary>
+        /// <param name="requestString"></param>
+        /// <param name="rootName"></param>
+        /// <returns></returns>
         public string request(string requestString, string rootName)
+        {
+            return "test";
+        }
     }
 }
