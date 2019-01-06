@@ -10,6 +10,12 @@ namespace gus_stats
     {
         protected override string ApiTestAddr => throw new NotImplementedException();
 
+        protected override string XmlNodeStructure => throw new NotImplementedException();
+
+        protected override string XmlLoadAddrPrefix => throw new NotImplementedException();
+
+        protected override string XmlLoadAddrSuffix => throw new NotImplementedException();
+
         public override string[] GetData()
         {
             throw new NotImplementedException();
